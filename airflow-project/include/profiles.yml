@@ -1,0 +1,6 @@
+pizza_project:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: C:/Users/DELL/Desktop/Analytics-Engineering/include/pizza_store.duckdb

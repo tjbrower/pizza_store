@@ -1,0 +1,30 @@
+[0m12:57:35.666338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000139F3324EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000139F0B1A710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000139F56D7D90>]}
+
+
+============================== 12:57:35.670817 | ee4e5379-098b-4c94-be43-cd531857320a ==============================
+[0m12:57:35.670817 [info ] [MainThread]: Running with dbt=1.11.12
+[0m12:57:35.671457 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\DELL\\.dbt', 'invocation_command': 'dbt init pizza_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:57:35.697001 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\DELL\.dbt
+[0m12:57:35.700928 [debug] [MainThread]: Starter project path: C:\Users\DELL\Desktop\Analytics-Engineering\venv\Lib\site-packages\dbt\include\starter_project
+[0m12:57:35.730612 [info ] [MainThread]: 
+Your new dbt project "pizza_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:57:35.731145 [info ] [MainThread]: Setting up your profile.
+[0m12:57:52.527698 [info ] [MainThread]: Profile pizza_project written to C:\Users\DELL\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m12:57:52.528820 [debug] [MainThread]: Command `dbt init` succeeded at 12:57:52.528660 after 16.97 seconds
+[0m12:57:52.529213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000139F5845A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000139F57D3D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000139F555BAC0>]}
+[0m12:57:52.529588 [debug] [MainThread]: Flushing usage events
+[0m12:57:52.997763 [debug] [MainThread]: An error was encountered while trying to flush usage events

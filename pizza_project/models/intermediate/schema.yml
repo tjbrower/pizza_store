@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int_pizza_orders
+    columns:
+      - name: order_details_id
+        tests:
+          - unique
+          - not_null

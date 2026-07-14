@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_order_details
+    columns:
+      - name: order_details_id
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: pizza_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_pizzas')
+              field: pizza_id
+
+  - name: stg_pizzas
+    columns:
+      - name: pizza_id
+        tests:
+          - unique
+          - not_null
+      - name: pizza_type_id
+        tests:
+          - relationships:
+              to: ref('stg_pizza_types')
+              field: pizza_type_id
+
+  - name: stg_pizza_types
+    columns:
+      - name: pizza_type_id
+        tests:
+          - unique
+          - not_null
