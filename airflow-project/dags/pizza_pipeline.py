@@ -14,14 +14,19 @@ with DAG(
         bash_command='python /usr/local/airflow/include/ingest.py'
     )
 
-    task_dbt_run = BashOperator(
-        task_id='dbt_run',
-        bash_command='dbt run --project-dir /usr/local/airflow/include --profiles-dir /usr/local/airflow/include'
+    task_dbt_run_and_snapshot = BashOperator(
+        task_id='dbt_run_and_snapshot',
+        bash_command='dbt run --project-dir /usr/local/airflow/include/pizza_project --profiles-dir /usr/local/airflow/include && dbt snapshot --project-dir /usr/local/airflow/include/pizza_project --profiles-dir /usr/local/airflow/include'
     )
+
+    # task_dbt_snapshot = BashOperator(
+        # task_id='dbt_snapshot',
+        # bash_command='dbt snapshot --project-dir /usr/local/airflow/include/pizza_project --profiles-dir /usr/local/airflow/include'
+    # )
 
     task_dbt_test = BashOperator(
         task_id='dbt_test',
-        bash_command='dbt test --project-dir /usr/local/airflow/include --profiles-dir /usr/local/airflow/include'
+        bash_command='dbt test --project-dir /usr/local/airflow/include/pizza_project --profiles-dir /usr/local/airflow/include'
     )
 
-    task_ingest >> task_dbt_run >> task_dbt_test
+    task_ingest >> task_dbt_run_and_snapshot >> task_dbt_test

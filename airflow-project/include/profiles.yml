@@ -3,4 +3,4 @@ pizza_project:
   outputs:
     dev:
       type: duckdb
-      path: C:/Users/DELL/Desktop/Analytics-Engineering/include/pizza_store.duckdb
+      path: /usr/local/airflow/include/pizza_store.duckdb
